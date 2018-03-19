@@ -14,7 +14,7 @@ WHERE name = 'Nevermind';
 SELECT 'Albums from the 90s' AS 'Exercise 2D';
 SELECT * FROM albums
 -- WHERE release_date > 1990 && release_date < 2000;
-WHERE BETWEEN 1990 AND 1999;
+WHERE relese_date BETWEEN 1990 AND 1999;
 
 SELECT 'Albums with sales lower than $20M' AS 'Exercise 2E';
 SELECT * FROM albums
