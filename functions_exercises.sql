@@ -14,9 +14,8 @@ ORDER BY emp_no DESC;
 
 
 
-SELECT CONCAT(
-           first_name, ' ', last_name, ' ', DATEDIFF(now(),hire_date)
-           ) AS Name
+SELECT CONCAT(first_name, ' ', last_name) AS Name,
+        CONCAT(DATEDIFF(now(),hire_date)) AS 'Days at Co.'
 FROM employees
 WHERE birth_date LIKE '%-12-25'
 AND hire_date BETWEEN '1990-01-01' AND '1999-12-31'
