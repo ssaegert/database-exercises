@@ -35,3 +35,30 @@ INSERT INTO users (name, email, role_id) VALUES
   ('nathan', 'nathan@example.com', 2),
   ('jim', 'jim@example.com', 2),
   ('john', 'john@example.com', null);
+
+SELECT users.name as user_name, roles.name as role_name
+FROM users
+JOIN roles ON users.role_id = roles.id;
+
+SELECT users.name AS user_name, roles.name AS role_name
+FROM users
+LEFT JOIN roles ON users.role_id = roles.id;
+
+SELECT users.name AS user_name, roles.name AS role_name
+FROM users
+RIGHT JOIN roles ON users.role_id = roles.id;
+
+
+SELECT users.name as user_name, roles.name as role_name
+FROM users
+  JOIN roles ON users.role_id = roles.id;
+
+SELECT roles.name AS Roles, COUNT(users.name) AS 'Number Of Users'
+FROM roles
+JOIN users ON roles.id = users.role_id
+GROUP BY Roles;
+
+
+SELECT roles.name AS Roles, COUNT(users.name) AS 'Number Of Users'
+FROM users
+# GROUP BY Roles;
