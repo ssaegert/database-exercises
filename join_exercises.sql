@@ -67,3 +67,4 @@ SELECT CONCAT(e.first_name, ' ', e.last_name) AS 'Employee Name',
       ON de.emp_no = e.emp_no
     JOIN departments AS d
       ON d.dept_no = de.dept_no;
+
