@@ -57,8 +57,3 @@ SELECT roles.name AS Roles, COUNT(users.name) AS 'Number Of Users'
 FROM roles
 JOIN users ON roles.id = users.role_id
 GROUP BY Roles;
-
-
-SELECT roles.name AS Roles, COUNT(users.name) AS 'Number Of Users'
-FROM users
-# GROUP BY Roles;
